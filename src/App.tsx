@@ -5,6 +5,7 @@ import FeatureCards from './components/FeatureCards';
 import StorySection from './components/StorySection';
 import Timeline from './components/Timeline';
 import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <StorySection />
         <Timeline />
         <Testimonials />
+        <Contact />
       </main>
       <Footer />
     </div>
