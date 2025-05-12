@@ -1,63 +1,80 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const galleryImages = [
   {
     id: 1,
     url: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
     title: "Modern Living Room",
-    category: "Living Space"
+    category: "Living Space",
+    aspectRatio: "4/3"
   },
   {
     id: 2,
     url: "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
     title: "Minimalist Kitchen",
-    category: "Kitchen"
+    category: "Kitchen",
+    aspectRatio: "3/4"
   },
   {
     id: 3,
     url: "https://images.pexels.com/photos/1743227/pexels-photo-1743227.jpeg",
     title: "Cozy Bedroom",
-    category: "Bedroom"
+    category: "Bedroom",
+    aspectRatio: "16/9"
   },
   {
     id: 4,
     url: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
     title: "Contemporary Bathroom",
-    category: "Bathroom"
+    category: "Bathroom",
+    aspectRatio: "1/1"
   },
   {
     id: 5,
     url: "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg",
     title: "Dining Area",
-    category: "Dining"
+    category: "Dining",
+    aspectRatio: "3/2"
   },
   {
     id: 6,
     url: "https://images.pexels.com/photos/1571467/pexels-photo-1571467.jpeg",
     title: "Office Space",
-    category: "Office"
+    category: "Office",
+    aspectRatio: "4/5"
   },
   {
     id: 7,
     url: "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg",
     title: "Modern Living Room",
-    category: "Living Space"
+    category: "Living Space",
+    aspectRatio: "3/2"
   },
   {
     id: 8,
     url: "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
     title: "Minimalist Kitchen",
-    category: "Kitchen"
+    category: "Kitchen",
+    aspectRatio: "1/1"
   },
   {
     id: 9,
     url: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
     title: "Cozy Bedroom",
-    category: "Bedroom"
+    category: "Bedroom",
+    aspectRatio: "4/3"
   }
 ];
 
+const categories = ["All", ...new Set(galleryImages.map(img => img.category))];
+
 const Gallery: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredImages = selectedCategory === "All" 
+    ? galleryImages 
+    : galleryImages.filter(img => img.category === selectedCategory);
+
   return (
     <div className="pt-24 px-4 sm:px-6 lg:px-8">
       {/* Breadcrumb */}
@@ -70,26 +87,48 @@ const Gallery: React.FC = () => {
       </div>
 
       {/* Header */}
-      <div className="max-w-7xl mx-auto mb-16">
+      <div className="max-w-7xl mx-auto mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-stone-800 mb-4">Our Gallery</h1>
         <p className="text-xl text-stone-600">Explore our collection of stunning interior designs</p>
       </div>
 
-      {/* Gallery Grid */}
+      {/* Category Filter */}
+      <div className="max-w-7xl mx-auto mb-12">
+        <div className="flex flex-wrap gap-4">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                selectedCategory === category
+                  ? "bg-[#A6917C] text-white"
+                  : "bg-stone-100 text-stone-600 hover:bg-stone-200"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Masonry Grid */}
       <div className="max-w-7xl mx-auto mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryImages.map((image) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[minmax(200px,auto)]">
+          {filteredImages.map((image) => (
             <div 
               key={image.id}
               className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+              style={{
+                height: '100%',
+                gridRow: `span ${Math.ceil(parseFloat(image.aspectRatio.split('/')[1]) / parseFloat(image.aspectRatio.split('/')[0]) * 2)}`
+              }}
             >
-              <div className="aspect-[4/3]">
-                <img 
-                  src={image.url} 
-                  alt={image.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <img 
+                src={image.url} 
+                alt={image.title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-white text-xl font-semibold mb-1">{image.title}</h3>
