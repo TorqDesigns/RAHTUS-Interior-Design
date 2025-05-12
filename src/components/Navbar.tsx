@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logoImage from '../../public/logo.jpg';
 import { Menu, X, MessageCircle } from 'lucide-react';
 
 const navLinks = [
-  { label: "Home", href: "#", active: true },
+  { label: "Home", href: "/" },
   { label: "Gallary", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,34 +28,37 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-2">
-            <img src={logoImage} alt="Logo" className="h-16 w-24 object-contain" />
+            <Link to="/">
+              <img src={logoImage} alt="Logo" className="h-16 w-24 object-contain" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 mx-auto">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
-                className={`font-medium transition-colors duration-300 ${link.active
-                  ? "text-orange-600"
-                  : "text-stone-700 hover:text-orange-600"
-                  }`}
+                to={link.href}
+                className={`font-medium transition-colors duration-300 ${
+                  location.pathname === link.href
+                    ? "text-orange-600"
+                    : "text-stone-700 hover:text-orange-600"
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Book Now Button */}
           <div className="hidden md:flex">
-            <a
-              href="#"
+            <Link
+              to="/contact"
               className="flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-[#A6917C] to-[#A6917C] text-white font-semibold shadow-md hover:scale-105 transition-transform"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Book Now
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -72,25 +77,28 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white  px-4 pt-4 pb-6 border-b border-stone-200 shadow-sm">
+        <div className="md:hidden bg-white px-4 pt-4 pb-6 border-b border-stone-200 shadow-sm">
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
-                className={`text-stone-700 hover:text-orange-600 font-medium block py-2 ${link.active ? "text-orange-600" : ""
-                  }`}
+                to={link.href}
+                className={`text-stone-700 hover:text-orange-600 font-medium block py-2 ${
+                  location.pathname === link.href ? "text-orange-600" : ""
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#"
-              className="flex items-center justify-center px-6 py-2 rounded-full bg-gradient-to-r  from-[#A6917C] to-[#A6917C] text-white font-semibold shadow-md mt-2"
+            <Link
+              to="/contact"
+              className="flex items-center justify-center px-6 py-2 rounded-full bg-gradient-to-r from-[#A6917C] to-[#A6917C] text-white font-semibold shadow-md mt-2"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Book Now
-            </a>
+            </Link>
           </nav>
         </div>
       )}
