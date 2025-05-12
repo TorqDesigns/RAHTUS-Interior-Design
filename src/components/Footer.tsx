@@ -14,11 +14,8 @@ const Footer: React.FC = () => {
               Crafting beautifully designed spaces that reflect your personality and enhance your everyday life.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-stone-500 hover:text-stone-800 transition-colors duration-300">
+              <a href="https://www.instagram.com/rahtus_interior_parametrics" className="text-stone-500 hover:text-stone-800 transition-colors duration-300">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="text-stone-500 hover:text-stone-800 transition-colors duration-300">
-                <Facebook size={20} />
               </a>
             </div>
           </div>
@@ -33,7 +30,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-stone-500 mr-2" />
-                <span className="text-stone-600">+1 212 678 90</span>
+                <span className="text-stone-600">+971502964292</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-stone-500 mr-2" />
