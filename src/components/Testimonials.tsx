@@ -11,7 +11,7 @@ type TestimonialProps = {
 
 const Testimonial: React.FC<TestimonialProps> = ({ name, location, image, review, rating }) => {
   return (
-    <div className="bg-white rounded-md shadow-lg p-10 border border-stone-100 transition-all duration-300 hover:shadow-xl">
+    <div className="bg-white rounded-md shadow-md p-10 border border-stone-100 transition-all duration-300 hover:shadow-xl">
       <div className="flex items-center mb-4">
         <img
           src={image}
