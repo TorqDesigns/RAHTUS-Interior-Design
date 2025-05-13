@@ -22,22 +22,21 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const serviceid = 'service_sg2oqil';
-    const templateid = 'template_wcbz6fk';
-    const publickey = 'hW6JGWdHLAouiHhwS';
+    const serviceid = 'service_1xymd9b';
+    const templateid = 'template_ll0qayt';
+    const publickey = 'D2CYoyQYP9J09pLCm';
 
     const form = {
       name: name,
       city: city,
       email: email,
       phone: phone,
-      message: message
+      message: message,
+      to_email: 'info@rahtusinterior.com, dhanraj@rahtusinterior.com'
     }
 
     emailjs.send(serviceid, templateid, form, publickey).then(() => {
       console.log(form);
-      alert('Message sent successfully!');
-
       toast.success('Message sent successfully!', {
         autoClose: 3000,
         hideProgressBar: true,

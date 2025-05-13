@@ -3,62 +3,83 @@ import React, { useState } from 'react';
 const galleryImages = [
   {
     id: 1,
+    url: "/assets/Gallary/Ceiling.jpeg",
+    title: "Ceiling Lighting",
+    category: "Parametric Design",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 2,
+    url: "/assets/Gallary/Headboard.jpeg",
+    title: "Curved Headboard LightWall",
+    category: "Parametric Design",
+    aspectRatio: "3/1"
+  },
+  {
+    id: 3,
+    url: "/assets/Gallary/Geometric.jpeg",
+    title: "Geometric Shelf WorldMap",
+    category: "Parametric Design",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 4,
     url: "/assets/Gallary/living-room.jpeg",
     title: "Modern Living Room",
     category: "Living Space",
     aspectRatio: "4/3"
   },
   {
-    id: 2,
+    id: 5,
     url: "/assets/Gallary/kitchen.jpeg",
     title: "Minimalist Kitchen",
     category: "Kitchen",
     aspectRatio: "3/4"
   },
   {
-    id: 3,
+    id: 6,
     url: "/assets/Gallary/Bedroom.jpeg",
     title: "Cozy Bedroom",
     category: "Bedroom",
     aspectRatio: "16/9"
   },
   {
-    id: 4,
+    id: 7,
     url: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
     title: "Contemporary Bathroom",
     category: "Bathroom",
     aspectRatio: "1/1"
   },
   {
-    id: 5,
+    id: 8,
     url: "/assets/Gallary/Dining.jpeg",
     title: "Dining Area",
     category: "Dining",
     aspectRatio: "3/2"
   },
   {
-    id: 6,
+    id: 9,
     url: "/assets/Gallary/Office.jpeg",
     title: "Office Space",
     category: "Office",
     aspectRatio: "4/5"
   },
   {
-    id: 7,
+    id: 10,
     url: "/assets/Gallary/Living.jpeg",
     title: "Modern Living Room",
     category: "Living Space",
     aspectRatio: "3/2"
   },
   {
-    id: 8,
+    id: 11,
     url: "/assets/Gallary/Kitchen2.jpeg",
     title: "Minimalist Kitchen",
     category: "Kitchen",
     aspectRatio: "1/1"
   },
   {
-    id: 9,
+    id: 12,
     url: "/assets/Gallary/Bedroom2.jpeg",
     title: "Cozy Bedroom",
     category: "Bedroom",
