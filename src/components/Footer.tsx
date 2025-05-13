@@ -43,11 +43,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-stone-800 mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Interior Design</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Decor</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Furniture</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Handicrafts</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Parametric Design
+              <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Interior Design</a></li>
+              <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Decor</a></li>
+              <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Furniture</a></li>
+              <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Handicrafts</a></li>
+              <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Parametric Design
               </a></li>
             </ul>
           </div>
@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-stone-800 mb-4">Knowledge</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Gallary</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Services</a></li>
+              <li><a href="/gallery" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Gallary</a></li>
+              <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Services</a></li>
               {/* <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Privacy Policy</a></li>
               <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Terms and Conditions</a></li> */}
             </ul>
