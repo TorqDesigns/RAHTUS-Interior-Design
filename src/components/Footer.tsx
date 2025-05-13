@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Mail, Phone } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import LogoImg from '../../public/logo.png';
 
 const Footer: React.FC = () => {
@@ -24,24 +24,26 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-stone-800 mb-4">Contact Us</h3>
             <ul className="space-y-3">
-              {/* <li className="flex items-start">
+              <li className="flex items-start">
                 <MapPin size={18} className="text-stone-500 mt-0.5 mr-2" />
-                <span className="text-stone-600">1056, Broadway Street 5th New York, USA</span>
-              </li> */}
+                <span className="text-stone-600">St -Al Quoz -Al Quoz Industrial Area 4 - Dubai</span>
+              </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-stone-500 mr-2" />
-                <span className="text-stone-600">+971 502964292</span>
+                <a href="tel:+971 502964292">
+                  <span className="text-stone-600">+971 502964292</span>
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-stone-500 mr-2" />
-                <span className="text-stone-600">ahtusinterior@gmail.com </span>
+                <a href="mailto:rahtusinterior@gmail.com"><span className="text-stone-600">rahtusinterior@gmail.com </span></a>
               </li>
             </ul>
           </div>
 
           {/* Company links */}
           <div>
-            <h3 className="font-semibold text-stone-800 mb-4">Company</h3>
+            <h3 className="font-semibold text-stone-800 mb-4">Services</h3>
             <ul className="space-y-2">
               <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Interior Design</a></li>
               <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Decor</a></li>
@@ -56,7 +58,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-stone-800 mb-4">Knowledge</h3>
             <ul className="space-y-2">
-              <li><a href="/gallery" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Gallary</a></li>
+              <li><a href="/gallery" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Gallery</a></li>
               <li><a href="/services" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Services</a></li>
               {/* <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Privacy Policy</a></li>
               <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Terms and Conditions</a></li> */}
