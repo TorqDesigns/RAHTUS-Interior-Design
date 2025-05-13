@@ -1,6 +1,6 @@
 import React from 'react';
 import btnIcon from '../../public/assets/Hero/hero-btn.png'
-import bgImage from '../../public/assets/Hero/Bg.jpeg' // Add this import
+import bgImage from '../../public/assets/Hero/Bg.jpeg' 
 import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {

@@ -3,21 +3,21 @@ import React, { useState } from 'react';
 const galleryImages = [
   {
     id: 1,
-    url: "../../public/assets/Gallary/living-room.jpeg",
+    url: "/assets/Gallary/living-room.jpeg",
     title: "Modern Living Room",
     category: "Living Space",
     aspectRatio: "4/3"
   },
   {
     id: 2,
-    url: "../../public/assets/Gallary/kitchen.jpeg",
+    url: "/assets/Gallary/kitchen.jpeg",
     title: "Minimalist Kitchen",
     category: "Kitchen",
     aspectRatio: "3/4"
   },
   {
     id: 3,
-    url: "../../public/assets/Gallary/Bedroom.jpeg",
+    url: "/assets/Gallary/Bedroom.jpeg",
     title: "Cozy Bedroom",
     category: "Bedroom",
     aspectRatio: "16/9"
@@ -31,35 +31,35 @@ const galleryImages = [
   },
   {
     id: 5,
-    url: "../../public/assets/Gallary/Dining.jpeg",
+    url: "/assets/Gallary/Dining.jpeg",
     title: "Dining Area",
     category: "Dining",
     aspectRatio: "3/2"
   },
   {
     id: 6,
-    url: "../../public/assets/Gallary/Office.jpeg",
+    url: "/assets/Gallary/Office.jpeg",
     title: "Office Space",
     category: "Office",
     aspectRatio: "4/5"
   },
   {
     id: 7,
-    url: "../../public/assets/Gallary/Living.jpeg",
+    url: "/assets/Gallary/Living.jpeg",
     title: "Modern Living Room",
     category: "Living Space",
     aspectRatio: "3/2"
   },
   {
     id: 8,
-    url: "../../public/assets/Gallary/Kitchen2.jpeg",
+    url: "/assets/Gallary/Kitchen2.jpeg",
     title: "Minimalist Kitchen",
     category: "Kitchen",
     aspectRatio: "1/1"
   },
   {
     id: 9,
-    url: "../../public/assets/Gallary/Bedroom2.jpeg",
+    url: "/assets/Gallary/Bedroom2.jpeg",
     title: "Cozy Bedroom",
     category: "Bedroom",
     aspectRatio: "4/3"
