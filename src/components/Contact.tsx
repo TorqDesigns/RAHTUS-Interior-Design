@@ -41,20 +41,20 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="max-w-7xl mx-auto ">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 shadow-sm">
           {/* Contact Info */}
-          <div className="lg:col-span-4 bg-[#A6917C] text-white p-8 rounded-lg">
+          <div className="lg:col-span-4 bg-[#A87852] text-white p-8 rounded-lg">
             <h2 className="text-2xl font-semibold mb-8">Contact Us</h2>
-            
+
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
+              {/* <div className="flex items-start space-x-4">
                 <MapPin className="w-6 h-6 mt-1" />
                 <div>
                   <p className="font-medium">Address</p>
                   <p className="text-white/80">St. Al Quoz - Al Quoz Industrial Area 4 - Dubai</p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-start space-x-4">
                 <Clock className="w-6 h-6 mt-1" />
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                 <Phone className="w-6 h-6 mt-1" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-white/80">+971502964292</p>
+                  <p className="text-white/80">+971 502964292</p>
                 </div>
               </div>
             </div>
@@ -162,7 +162,7 @@ const Contact: React.FC = () => {
 
         {/* Map Image */}
         <div className="mt-16 rounded-lg overflow-hidden h-[400px]">
-          <img 
+          <img
             src="https://images.pexels.com/photos/2883049/pexels-photo-2883049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt="Location Map"
             className="w-full h-full object-cover"

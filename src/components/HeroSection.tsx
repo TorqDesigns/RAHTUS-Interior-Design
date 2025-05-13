@@ -1,7 +1,7 @@
 import React from 'react';
 import btnIcon from '../../public/assets/Hero/hero-btn.png'
 import bgImage from '../../public/assets/Hero/Bg.jpeg' // Add this import
-
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   return (
@@ -26,11 +26,15 @@ const HeroSection: React.FC = () => {
             <p className="text-black text-sm md:text-xl lg:text-[18px] mb-8 font-light leading-relaxed">
               Thoughtfully designed spaces that echo your essence and elevate everyday living.
             </p>
-            <button className="flex items-center px-6 py-3 gap-2 rounded-full bg-gradient-to-r from-[#A6917C] to-[#A6917C] text-white font-semibold shadow-md hover:scale-105 transition-transform"
-            >
-              <img src={btnIcon} className="transition-transform duration-300 group-hover:translate-x-1" />
-              Step Inside
-            </button>
+            <Link
+              to="/contact">
+
+              <button className="flex items-center px-6 py-3 gap-2 rounded-full bg-gradient-to-r from-[#A6917C] to-[#A6917C] text-white font-semibold shadow-md hover:scale-105 transition-transform"
+              >
+                <img src={btnIcon} className="transition-transform duration-300 group-hover:translate-x-1" />
+                Step Inside
+              </button>
+            </Link>
 
           </div>
         </div>

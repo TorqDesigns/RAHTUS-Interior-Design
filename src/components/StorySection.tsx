@@ -7,31 +7,31 @@ const StorySection: React.FC = () => {
         {/* Image gallery side */}
         <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full">
           <div className="col-span-1 row-span-1">
-            <img 
-              src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="Minimalist living room" 
+            <img
+              src="../../public/assets/Services/Interior.jpeg"
+              alt="Minimalist living room"
               className="w-full h-full object-cover rounded-lg"
               style={{ aspectRatio: "1/1" }}
             />
           </div>
           <div className="col-span-1 row-span-2">
-            <img 
-              src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="Modern kitchen design" 
+            <img
+              src="../../public/assets/Gallary/Bedroom2.jpeg"
+              alt="Modern kitchen design"
               className="w-full h-full object-cover rounded-lg"
               style={{ aspectRatio: "3/4" }}
             />
           </div>
           <div className="col-span-1 row-span-1">
-            <img 
-              src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="Cozy bedroom space" 
+            <img
+              src="../../public/assets/Gallary/Living.jpeg"
+              alt="Cozy bedroom space"
               className="w-full h-full object-cover rounded-lg"
               style={{ aspectRatio: "1/1" }}
             />
           </div>
         </div>
-        
+
         {/* Text content side */}
         <div className="lg:pl-8">
           <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mb-6">How It All Began</h2>

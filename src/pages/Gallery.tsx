@@ -3,76 +3,75 @@ import React, { useState } from 'react';
 const galleryImages = [
   {
     id: 1,
-    url: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+    url: "../../public/assets/Gallary/living-room.jpeg",
     title: "Modern Living Room",
     category: "Living Space",
     aspectRatio: "4/3"
   },
   {
     id: 2,
-    url: "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
+    url: "../../public/assets/Gallary/kitchen.jpeg",
     title: "Minimalist Kitchen",
     category: "Kitchen",
     aspectRatio: "3/4"
   },
   {
     id: 3,
-    url: "https://images.pexels.com/photos/1743227/pexels-photo-1743227.jpeg",
+    url: "../../public/assets/Gallary/Bedroom.jpeg",
     title: "Cozy Bedroom",
     category: "Bedroom",
     aspectRatio: "16/9"
   },
   {
     id: 4,
-    url: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
+    url: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
     title: "Contemporary Bathroom",
     category: "Bathroom",
     aspectRatio: "1/1"
   },
   {
     id: 5,
-    url: "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg",
+    url: "../../public/assets/Gallary/Dining.jpeg",
     title: "Dining Area",
     category: "Dining",
     aspectRatio: "3/2"
   },
   {
     id: 6,
-    url: "https://images.pexels.com/photos/1571467/pexels-photo-1571467.jpeg",
+    url: "../../public/assets/Gallary/Office.jpeg",
     title: "Office Space",
     category: "Office",
     aspectRatio: "4/5"
   },
   {
     id: 7,
-    url: "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg",
+    url: "../../public/assets/Gallary/Living.jpeg",
     title: "Modern Living Room",
     category: "Living Space",
     aspectRatio: "3/2"
   },
   {
     id: 8,
-    url: "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+    url: "../../public/assets/Gallary/Kitchen2.jpeg",
     title: "Minimalist Kitchen",
     category: "Kitchen",
     aspectRatio: "1/1"
   },
   {
     id: 9,
-    url: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
+    url: "../../public/assets/Gallary/Bedroom2.jpeg",
     title: "Cozy Bedroom",
     category: "Bedroom",
     aspectRatio: "4/3"
   }
 ];
 
-const categories = ["All", ...new Set(galleryImages.map(img => img.category))];
 
 const Gallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredImages = selectedCategory === "All" 
-    ? galleryImages 
+  const filteredImages = selectedCategory === "All"
+    ? galleryImages
     : galleryImages.filter(img => img.category === selectedCategory);
 
   return (
@@ -92,12 +91,12 @@ const Gallery: React.FC = () => {
         <p className="text-xl text-stone-600">Explore our collection of stunning interior designs</p>
       </div>
 
-      
+
       {/* Masonry Grid */}
       <div className="max-w-7xl mx-auto mb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[minmax(200px,auto)]">
           {filteredImages.map((image) => (
-            <div 
+            <div
               key={image.id}
               className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-[1.02]"
               style={{
@@ -105,8 +104,8 @@ const Gallery: React.FC = () => {
                 gridRow: `span ${Math.ceil(parseFloat(image.aspectRatio.split('/')[1]) / parseFloat(image.aspectRatio.split('/')[0]) * 2)}`
               }}
             >
-              <img 
-                src={image.url} 
+              <img
+                src={image.url}
                 alt={image.title}
                 className="w-full h-full object-cover"
                 loading="lazy"

@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Gallery", href: "/gallery" },
   { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar: React.FC = () => {
@@ -40,11 +39,10 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.label}
                 to={link.href}
-                className={`font-medium transition-colors duration-300 ${
-                  location.pathname === link.href
+                className={`font-medium transition-colors duration-300 ${location.pathname === link.href
                     ? "text-orange-600"
                     : "text-stone-700 hover:text-orange-600"
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -84,9 +82,8 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.label}
                 to={link.href}
-                className={`text-stone-700 hover:text-orange-600 font-medium block py-2 ${
-                  location.pathname === link.href ? "text-orange-600" : ""
-                }`}
+                className={`text-stone-700 hover:text-orange-600 font-medium block py-2 ${location.pathname === link.href ? "text-orange-600" : ""
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}

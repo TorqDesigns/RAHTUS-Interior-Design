@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react';
+import { Instagram, Mail, Phone } from 'lucide-react';
 import LogoImg from '../../public/logo.png';
 
 const Footer: React.FC = () => {
@@ -24,17 +24,17 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-stone-800 mb-4">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
+              {/* <li className="flex items-start">
                 <MapPin size={18} className="text-stone-500 mt-0.5 mr-2" />
                 <span className="text-stone-600">1056, Broadway Street 5th New York, USA</span>
-              </li>
+              </li> */}
               <li className="flex items-center">
                 <Phone size={18} className="text-stone-500 mr-2" />
-                <span className="text-stone-600">+971502964292</span>
+                <span className="text-stone-600">+971 502964292</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-stone-500 mr-2" />
-                <span className="text-stone-600">rahtus@gmail.com</span>
+                <span className="text-stone-600">ahtusinterior@gmail.com </span>
               </li>
             </ul>
           </div>
@@ -43,22 +43,23 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-stone-800 mb-4">Company</h3>
             <ul className="space-y-2">
+              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Interior Design</a></li>
               <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Decor</a></li>
               <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Furniture</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Lighting</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Blog</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Shop</a></li>
+              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Handicrafts</a></li>
+              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Parametric Design
+              </a></li>
             </ul>
           </div>
 
           {/* About links */}
           <div>
-            <h3 className="font-semibold text-stone-800 mb-4">About</h3>
+            <h3 className="font-semibold text-stone-800 mb-4">Knowledge</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">About Us</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Blog</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Privacy Policy</a></li>
-              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Terms and Conditions</a></li>
+              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Gallary</a></li>
+              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Services</a></li>
+              {/* <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Privacy Policy</a></li>
+              <li><a href="#" className="text-stone-600 hover:text-stone-800 transition-colors duration-300">Terms and Conditions</a></li> */}
             </ul>
           </div>
         </div>
