@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="text-stone-500 mt-0.5 mr-2" />
-                <span className="text-stone-600">St -Al Quoz -Al Quoz Industrial Area 4 - Dubai</span>
+                <span className="text-stone-600">Warehouse 28 , 22nd St - Al Quoz - Al Quoz Industrial Area 4 - Dubai</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-stone-500 mr-2" />

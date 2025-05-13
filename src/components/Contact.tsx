@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
                 <MapPin className="w-6 h-6 mt-1" />
                 <div>
                   <p className="font-medium">Address</p>
-                  <p className="text-white/80">St. Al Quoz - Al Quoz Industrial Area 4 - Dubai</p>
+                  <p className="text-white/80">Warehouse 28 , 22nd St - Al Quoz - Al Quoz Industrial Area 4 - Dubai</p>
                 </div>
               </div>
 
