@@ -1,25 +1,58 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Phone } from 'lucide-react';
+import { Clock, Phone } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    city: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   city: '',
+  //   email: '',
+  //   phone: '',
+  //   message: ''
+  // });
+
+  const [name, setName] = useState('');
+  const [city, setCity] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+    const serviceid = 'service_sg2oqil';
+    const templateid = 'template_wcbz6fk';
+    const publickey = 'hW6JGWdHLAouiHhwS';
+
+    const form = {
+      name: name,
+      city: city,
+      email: email,
+      phone: phone,
+      message: message
+    }
+
+    emailjs.send(serviceid, templateid, form, publickey).then(() => {
+      console.log(form);
+      alert('Message sent successfully!');
+
+      toast.success('Message sent successfully!', {
+        autoClose: 3000,
+        hideProgressBar: true,
+        theme: 'light',
+      });
+
+      setName('');
+      setCity('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+
+    }).catch((error) => {
+      alert('Failed to send message');
+      console.log('Error:', error);
     });
   };
 
@@ -84,8 +117,8 @@ const Contact: React.FC = () => {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
+                  // value={formData.name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-[#A6917C] focus:border-transparent"
                   placeholder="John Doe"
                   required
@@ -98,8 +131,8 @@ const Contact: React.FC = () => {
                   type="text"
                   id="city"
                   name="city"
-                  value={formData.city}
-                  onChange={handleChange}
+                  // value={formData.city}
+                  onChange={(e) => setCity(e.target.value)}
                   className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-[#A6917C] focus:border-transparent"
                   placeholder="Bahrain"
                   required
@@ -112,8 +145,8 @@ const Contact: React.FC = () => {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  // value={formData.email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-[#A6917C] focus:border-transparent"
                   placeholder="johndoe@gmail.com"
                   required
@@ -126,8 +159,8 @@ const Contact: React.FC = () => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
+                  // value={formData.phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-[#A6917C] focus:border-transparent"
                   placeholder="+97112345789"
                   required
@@ -139,8 +172,8 @@ const Contact: React.FC = () => {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  // value={formData.message}
+                  onChange={(e) => setMessage(e.target.value)}
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-[#A6917C] focus:border-transparent"
                   placeholder="Hello! I have a query regarding..."
@@ -160,7 +193,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Map Image */}
         <div className="mt-16 rounded-lg overflow-hidden h-[400px]">
           <img
             src="https://images.pexels.com/photos/2883049/pexels-photo-2883049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -169,6 +201,7 @@ const Contact: React.FC = () => {
           />
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
