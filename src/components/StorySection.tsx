@@ -8,7 +8,7 @@ const StorySection: React.FC = () => {
         <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full">
           <div className="col-span-1 row-span-1">
             <img
-              src="../../public/assets/Services/Interior.jpeg"
+              src="/assets/Services/Interior.jpeg"
               alt="Minimalist living room"
               className="w-full h-full object-cover rounded-lg"
               style={{ aspectRatio: "1/1" }}
@@ -16,7 +16,7 @@ const StorySection: React.FC = () => {
           </div>
           <div className="col-span-1 row-span-2">
             <img
-              src="../../public/assets/Gallary/Bedroom2.jpeg"
+              src="/assets/Gallary/Bedroom2.jpeg"
               alt="Modern kitchen design"
               className="w-full h-full object-cover rounded-lg"
               style={{ aspectRatio: "3/4" }}
@@ -24,7 +24,7 @@ const StorySection: React.FC = () => {
           </div>
           <div className="col-span-1 row-span-1">
             <img
-              src="../../public/assets/Gallary/Living.jpeg"
+              src="/assets/Gallary/Living.jpeg"
               alt="Cozy bedroom space"
               className="w-full h-full object-cover rounded-lg"
               style={{ aspectRatio: "1/1" }}
