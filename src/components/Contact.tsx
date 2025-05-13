@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Clock, Phone } from 'lucide-react';
+import { Clock, Phone, MapPin, Mail } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -22,22 +22,21 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const serviceid = 'service_sg2oqil';
-    const templateid = 'template_wcbz6fk';
-    const publickey = 'hW6JGWdHLAouiHhwS';
+    const serviceid = 'service_1xymd9b';
+    const templateid = 'template_ll0qayt';
+    const publickey = 'D2CYoyQYP9J09pLCm';
 
     const form = {
       name: name,
       city: city,
       email: email,
       phone: phone,
-      message: message
+      message: message,
+      to_email: 'info@rahtusinterior.com, dhanraj@rahtusinterior.com'
     }
 
     emailjs.send(serviceid, templateid, form, publickey).then(() => {
       console.log(form);
-      alert('Message sent successfully!');
-
       toast.success('Message sent successfully!', {
         autoClose: 3000,
         hideProgressBar: true,
@@ -81,13 +80,13 @@ const Contact: React.FC = () => {
             <h2 className="text-2xl font-semibold mb-8">Contact Us</h2>
 
             <div className="space-y-6">
-              {/* <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-4">
                 <MapPin className="w-6 h-6 mt-1" />
                 <div>
                   <p className="font-medium">Address</p>
                   <p className="text-white/80">St. Al Quoz - Al Quoz Industrial Area 4 - Dubai</p>
                 </div>
-              </div> */}
+              </div>
 
               <div className="flex items-start space-x-4">
                 <Clock className="w-6 h-6 mt-1" />
@@ -102,7 +101,19 @@ const Contact: React.FC = () => {
                 <Phone className="w-6 h-6 mt-1" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-white/80">+971 502964292</p>
+                  <a href="tel:+971 502964292">
+                    <p className="text-white/80">+971 502964292</p>
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Mail className="w-6 h-6 mt-1" />
+                <div>
+                  <p className="font-medium">Email</p>
+                  <a href="mailto:rahtusinterior@gmail.com">
+
+                    <p className="text-white/80">rahtusinterior@gmail.com</p>
+                  </a>
                 </div>
               </div>
             </div>
