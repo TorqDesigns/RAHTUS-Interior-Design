@@ -84,7 +84,28 @@ const galleryImages = [
     title: "Cozy Bedroom",
     category: "Bedroom",
     aspectRatio: "4/3"
-  }
+  },
+  {
+    id: 13,
+    url: "/assets/Gallary/Wardrobe.jpeg",
+    title: "New Chinese Style Wardrobe",
+    category: "Furniture",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 14,
+    url: "/assets/Gallary/Studio.png",
+    title: "Studio Space",
+    category: "Interior Design",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 15,
+    url: "/assets/Gallary/Modernwalls.jpeg",
+    title: "Modern Wall Design",
+    category: "Parametric Design",
+    aspectRatio: "4/3"
+  },
 ];
 
 
