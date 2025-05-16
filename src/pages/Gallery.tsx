@@ -106,6 +106,27 @@ const galleryImages = [
     category: "Parametric Design",
     aspectRatio: "4/3"
   },
+  {
+    id: 16,
+    url: "/assets/Gallary/parametric1.png",
+    title: "Modern Ceiling Design",
+    category: "Parametric Design",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 17,
+    url: "/assets/Gallary/parametric2.png",
+    title: "Modern Wall Design",
+    category: "Parametric Design",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 18,
+    url: "/assets/Gallary/parametric3.png",
+    title: "Modern Wall Design",
+    category: "Parametric Design",
+    aspectRatio: "4/3"
+  },
 ];
 
 
