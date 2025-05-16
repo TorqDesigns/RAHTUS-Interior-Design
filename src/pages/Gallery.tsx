@@ -118,14 +118,14 @@ const galleryImages = [
     url: "/assets/Gallary/parametric2.png",
     title: "Modern Wall Design",
     category: "Parametric Design",
-    aspectRatio: "4/3"
+    aspectRatio: "3/2"
   },
   {
     id: 18,
     url: "/assets/Gallary/parametric3.png",
     title: "Modern Wall Design",
     category: "Parametric Design",
-    aspectRatio: "4/3"
+    aspectRatio: "4/5"
   },
 ];
 
