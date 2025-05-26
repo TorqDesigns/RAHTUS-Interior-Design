@@ -3,126 +3,126 @@ import React, { useState } from 'react';
 const galleryImages = [
   {
     id: 1,
-    url: "/assets/Gallary/Ceiling.jpeg",
-    title: "Ceiling Lighting",
-    category: "Parametric Design",
+    url: "/assets/Gallary/M1.jpeg",
+    title: "Contemporary Staircase",
+    category: "Organic Flow",
     aspectRatio: "4/3"
   },
   {
     id: 2,
-    url: "/assets/Gallary/Headboard.jpeg",
-    title: "Curved Headboard LightWall",
-    category: "Parametric Design",
+    url: "/assets/Gallary/M5.jpeg",
+    title: "Artistic Café Lounge",
+    category: "Lounge / Café",
     aspectRatio: "3/1"
   },
   {
     id: 3,
-    url: "/assets/Gallary/Geometric.jpeg",
-    title: "Geometric Shelf WorldMap",
-    category: "Parametric Design",
+    url: "/assets/Gallary/M2.jpeg",
+    title: "Minimalist Meeting Nook",
+    category: "Office",
     aspectRatio: "4/3"
   },
   {
     id: 4,
-    url: "/assets/Gallary/living-room.jpeg",
-    title: "Modern Living Room",
-    category: "Living Space",
+    url: "/assets/Gallary/M6.jpeg",
+    title: "Elegant Reception",
+    category: "Office",
     aspectRatio: "4/3"
   },
   {
     id: 5,
-    url: "/assets/Gallary/kitchen.jpeg",
-    title: "Minimalist Kitchen",
-    category: "Kitchen",
+    url: "/assets/Gallary/M3.jpeg",
+    title: "Modern Office Entrance with Wooden Paneling",
+    category: "Interior Design",
     aspectRatio: "3/4"
   },
   {
     id: 6,
-    url: "/assets/Gallary/Bedroom.jpeg",
-    title: "Cozy Bedroom",
-    category: "Bedroom",
+    url: "/assets/Gallary/M8.jpeg",
+    title: " Collaborative Workspace with Tiered Seating and Modern Design",
+    category: "Interior Design / Office Lounge Area",
     aspectRatio: "16/9"
   },
   {
     id: 7,
-    url: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
-    title: "Contemporary Bathroom",
-    category: "Bathroom",
+    url: "/assets/Gallary/M9.jpeg",
+    title: "Elegant Executive Lounge with Contemporary Seating and Indoor Plants",
+    category: "Office Reception & Lounge Area",
     aspectRatio: "1/1"
   },
   {
     id: 8,
-    url: "/assets/Gallary/Dining.jpeg",
-    title: "Dining Area",
-    category: "Dining",
+    url: "/assets/Gallary/M10.jpeg",
+    title: "Modern Amphitheater-Style Workspace",
+    category: "Interior Design",
     aspectRatio: "3/2"
   },
   {
     id: 9,
-    url: "/assets/Gallary/Office.jpeg",
-    title: "Office Space",
+    url: "/assets/Gallary/M7.jpeg",
+    title: "Executive Boardroom with U-Shaped Seating",
     category: "Office",
     aspectRatio: "4/5"
   },
   {
     id: 10,
-    url: "/assets/Gallary/Living.jpeg",
-    title: "Modern Living Room",
-    category: "Living Space",
+    url: "/assets/Gallary/M18.jpeg",
+    title: "Modern Interior Stairwell",
+    category: "Open Plan Design",
     aspectRatio: "3/2"
   },
   {
     id: 11,
-    url: "/assets/Gallary/Kitchen2.jpeg",
-    title: "Minimalist Kitchen",
-    category: "Kitchen",
+    url: "/assets/Gallary/M17.jpeg",
+    title: "Office Reception Area",
+    category: "Modern Lobby",
     aspectRatio: "1/1"
   },
   {
     id: 12,
-    url: "/assets/Gallary/Bedroom2.jpeg",
-    title: "Cozy Bedroom",
-    category: "Bedroom",
+    url: "/assets/Gallary/M16.jpeg",
+    title: "Commercial Lounge",
+    category: "Modern Office Lobby",
     aspectRatio: "4/3"
   },
   {
     id: 13,
-    url: "/assets/Gallary/Wardrobe.jpeg",
-    title: "New Chinese Style Wardrobe",
-    category: "Furniture",
+    url: "/assets/Gallary/M15.jpeg",
+    title: "Executive Home Office",
+    category: "Workspace Interior",
     aspectRatio: "4/3"
   },
   {
     id: 14,
-    url: "/assets/Gallary/Studio.png",
-    title: "Studio Space",
-    category: "Interior Design",
+    url: "/assets/Gallary/M14.jpeg",
+    title: "Manar Mall Promenade",
+    category: "Outdoor Architecture",
     aspectRatio: "4/3"
   },
   {
     id: 15,
-    url: "/assets/Gallary/Modernwalls.jpeg",
-    title: "Modern Wall Design",
-    category: "Parametric Design",
+    url: "/assets/Gallary/M13.jpeg",
+    title: "Bathroom Showroom",
+    category: "Fixture Display",
     aspectRatio: "4/3"
   },
   {
     id: 16,
-    url: "/assets/Gallary/parametric1.png",
-    title: "Modern Ceiling Design",
-    category: "Parametric Design",
+    url: "/assets/Gallary/M12.jpeg",
+    title: "Fast Casual Dining",
+    category: "Food Service Interior",
     aspectRatio: "4/3"
   },
   {
     id: 17,
-    url: "/assets/Gallary/parametric2.png",
-    title: "Modern Wall Design",
-    category: "Parametric Design",
+    url: "/assets/Gallary/M4.jpeg",
+    title: "Retail Kiosk Design",
+    category: "Interior Design",
     aspectRatio: "3/2"
   },
   {
     id: 18,
-    url: "/assets/Gallary/parametric3.png",
+    url: "/assets/Gallary/M11.jpeg",
     title: "Modern Wall Design",
     category: "Parametric Design",
     aspectRatio: "4/5"
