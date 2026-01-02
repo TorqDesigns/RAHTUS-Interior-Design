@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
                 <MapPin className="w-6 h-6 mt-1" />
                 <div>
                   <p className="font-medium">Address</p>
-                  <p className="text-white/80">Warehouse 28 , 22nd St - Al Quoz - Al Quoz Industrial Area 4 - Dubai</p>
+                  <p className="text-white/80">Warehouse 06, Plot no 757-0 <br /> Near Cam Auto Centre, DIP 1, Dubai, UAE</p>
                 </div>
               </div>
 
@@ -101,8 +101,8 @@ const Contact: React.FC = () => {
                 <Phone className="w-6 h-6 mt-1" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <a href="tel:+971 502964292">
-                    <p className="text-white/80">+971 502964292</p>
+                  <a href="tel:043554359">
+                    <p className="text-white/80">043554359</p>
                   </a>
                 </div>
               </div>
@@ -110,9 +110,9 @@ const Contact: React.FC = () => {
                 <Mail className="w-6 h-6 mt-1" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:rahtusinterior@gmail.com">
+                  <a href="mailto:info@rahtusinterior.com">
 
-                    <p className="text-white/80">rahtusinterior@gmail.com</p>
+                    <p className="text-white/80">info@rahtusinterior.com</p>
                   </a>
                 </div>
               </div>
